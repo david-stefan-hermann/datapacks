@@ -1,57 +1,35 @@
-# Tech Reborn Ore Boost
+# Minecraft Datapacks
 
-A datapack that makes [Tech Reborn](https://github.com/TechReborn/TechReborn) ore veins bigger.
+Small datapacks that tweak mod worldgen, built for **Minecraft 26.2** (data pack format 107.1) on Fabric.
 
-Only the vein size (`size` of each ore `configured_feature`) is changed. Height ranges, veins per chunk and deepslate variants stay exactly as in Tech Reborn.
+| Pack | What it does | Mod |
+|---|---|---|
+| [techreborn-ore-boost](techreborn-ore-boost) | Makes ore veins 2x or 3x bigger | Tech Reborn 6.1.1 |
+| [energizedpower-no-tin-ore](energizedpower-no-tin-ore) | Disables Tin Ore generation | Energized Power 3.0.0+26.2.x |
 
-## Variants
+Each folder has its own README with the details. Downloads are on the [releases page](../../releases); tags are prefixed per pack, e.g. `techreborn-ore-boost-v1.0.0`.
 
-| Ore | Dimension | Default | x2 | x3 |
-|---|---|---|---|---|
-| Tin | Overworld | 8 | 16 | 24 |
-| Galena | Overworld | 8 | 16 | 24 |
-| Bauxite | Overworld | 6 | 12 | 18 |
-| Lead | Overworld | 6 | 12 | 18 |
-| Silver | Overworld | 6 | 12 | 18 |
-| Ruby | Overworld | 6 | 12 | 18 |
-| Sapphire | Overworld | 6 | 12 | 18 |
-| Uranium | Overworld | 4 | 8 | 12 |
-| Iridium | Overworld | 3 | 6 | 9 |
-| Cinnabar | Nether | 6 | 12 | 18 |
-| Pyrite | Nether | 6 | 12 | 18 |
-| Sphalerite | Nether | 6 | 12 | 18 |
-| Peridot | End | 6 | 12 | 18 |
-| Sheldonite | End | 6 | 12 | 18 |
-| Sodalite | End | 6 | 12 | 18 |
-| Tungsten | End | 6 | 12 | 18 |
-
-`size` is the upper bound of a vein, so the actual block count still varies. On average it scales with the value.
-
-## Requirements
-
-- Minecraft 26.2 (data pack format 107.1)
-- Tech Reborn 6.1.1 (Fabric)
-
-Other versions are untested. The pack keeps working as long as Tech Reborn does not change its ore feature files.
-
-## Installation
-
-Download **one** variant from the [releases](../../releases) — installing both makes the one loaded last win.
+## Installation (all packs)
 
 - **New world:** Create World → More → Data Packs → drop the zip in.
 - **Existing world:** copy the zip to `saves/<world>/datapacks/` and reload the world. Worldgen changes need a full world load; `/reload` is not enough.
 
-Only newly generated chunks are affected.
+Worldgen changes only affect newly generated chunks.
+
+## Repository layout
+
+```
+<pack-name>/
+  README.md
+  packs/<ZipName>/      # pack source: pack.mcmeta + data/
+  tools/                # optional, pack-specific scripts
+tools/build.ps1         # zips every packs/<ZipName> into dist/<ZipName>.zip
+```
 
 ## Building
 
 ```powershell
-# regenerate packs/ from a Tech Reborn jar (default factors: 2 and 3)
-./tools/generate.ps1 -Jar path/to/TechReborn-6.1.1.jar
-# zip packs/* into dist/
 ./tools/build.ps1
 ```
 
-## Credits
-
-The ore feature files are derived from Tech Reborn, which is licensed under the MIT License.
+The zips land in `dist/`, which is not tracked by git.

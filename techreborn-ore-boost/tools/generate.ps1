@@ -1,4 +1,5 @@
-# Regenerates packs/x<N> from a Tech Reborn jar: copies every ore configured_feature and multiplies its "size".
+# Regenerates packs/TechReborn-OreBoost-x<N> from a Tech Reborn jar:
+# copies every ore configured_feature and multiplies its "size".
 param(
     [Parameter(Mandatory)] [string] $Jar,
     [int[]] $Factors = @(2, 3)
@@ -12,7 +13,7 @@ $src  = [IO.Compression.ZipFile]::OpenRead((Resolve-Path $Jar).Path)
 try {
     $ores = $src.Entries | Where-Object { $_.FullName -match '^data/techreborn/worldgen/configured_feature/.*_ore\.json$' }
     foreach ($factor in $Factors) {
-        $pack = Join-Path $root "packs/x$factor"
+        $pack = Join-Path $root "packs/TechReborn-OreBoost-x$factor"
         if (Test-Path $pack) { Remove-Item $pack -Recurse -Force }
         $featureDir = Join-Path $pack 'data/techreborn/worldgen/configured_feature'
         New-Item -ItemType Directory -Force $featureDir | Out-Null
