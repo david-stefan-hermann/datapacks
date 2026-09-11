@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "Tech Reborn Ore Boost: vein size x3",
+    "min_format": [107, 1],
+    "max_format": 107
+  }
+}
