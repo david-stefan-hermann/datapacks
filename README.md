@@ -1,11 +1,12 @@
 # Minecraft Datapacks
 
-Small datapacks that tweak mod worldgen, built for **Minecraft 26.2** (data pack format 107.1) on Fabric.
+Small datapacks that tweak mods, built for **Minecraft 26.2** (data pack format 107.1) on Fabric.
 
 | Pack | What it does | Mod |
 |---|---|---|
 | [techreborn-ore-boost](techreborn-ore-boost) | Makes ore veins 2x or 3x bigger | Tech Reborn 6.1.1 |
 | [energizedpower-no-tin-ore](energizedpower-no-tin-ore) | Disables Tin Ore generation | Energized Power 3.0.0+26.2.x |
+| [refinedstorage-decolor](refinedstorage-decolor) | Crafts coloured blocks back to the default colour, no dye | Refined Storage 2 (26.2 Fabric build) |
 
 Each folder has its own README with the details. Downloads are on the [releases page](../../releases); tags are prefixed per pack, e.g. `techreborn-ore-boost-v1.0.0`.
 

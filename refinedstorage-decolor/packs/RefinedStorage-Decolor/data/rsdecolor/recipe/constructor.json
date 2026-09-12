@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "rsdecolor",
+  "ingredients": [
+    [
+      "refinedstorage:white_constructor",
+      "refinedstorage:orange_constructor",
+      "refinedstorage:magenta_constructor",
+      "refinedstorage:light_blue_constructor",
+      "refinedstorage:yellow_constructor",
+      "refinedstorage:lime_constructor",
+      "refinedstorage:pink_constructor",
+      "refinedstorage:light_gray_constructor",
+      "refinedstorage:cyan_constructor",
+      "refinedstorage:purple_constructor",
+      "refinedstorage:blue_constructor",
+      "refinedstorage:brown_constructor",
+      "refinedstorage:green_constructor",
+      "refinedstorage:red_constructor",
+      "refinedstorage:black_constructor"
+    ]
+  ],
+  "result": {
+    "id": "refinedstorage:constructor"
+  }
+}
