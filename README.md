@@ -8,7 +8,15 @@ Small datapacks that tweak mods, built for **Minecraft 26.2** (data pack format 
 | [energizedpower-no-tin-ore](energizedpower-no-tin-ore) | Disables Tin Ore generation | Energized Power 3.0.0+26.2.x |
 | [refinedstorage-decolor](refinedstorage-decolor) | Crafts coloured blocks back to the default colour, no dye | Refined Storage 2 (26.2 Fabric build) |
 
-Each folder has its own README with the details. Downloads are on the [releases page](../../releases); tags are prefixed per pack, e.g. `techreborn-ore-boost-v1.0.0`.
+Each folder has its own README with the details. Downloads are on the [releases page](../../releases); tags are prefixed per pack
+and end with the Minecraft version, e.g. `techreborn-ore-boost-v1.1.0+26.2` (the first releases carry no Minecraft
+version and are for 26.2).
+
+## Branches
+
+One branch per Minecraft version, named after it (`26.2`); there is no `main`. The default branch is the newest
+version. A branch holds only the packs whose mod exists for that Minecraft version, so the table above differs per
+branch.
 
 ## Installation (all packs)
 
